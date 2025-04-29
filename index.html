@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak Kumar - Product Manager</title>
+    <title>Deepak Kumar | AI Product Leader</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2A2A72;
-            --secondary: #FFA400;
-            --accent: #009FFD;
-            --background: #f8f9fa;
+            --primary: #2563EB;
+            --secondary: #10B981;
+            --accent: #06B6D4;
+            --background: #F8FAFC;
+            --text: #1E293B;
+            --surface: #FFFFFF;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', system-ui, sans-serif;
         }
 
         body {
             background: var(--background);
+            color: var(--text);
             line-height: 1.6;
+            font-size: 1.05rem;
         }
 
         .container {
@@ -31,200 +35,360 @@
             padding: 20px;
         }
 
-        /* Header Styles */
-        .header {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
+            padding: 5rem 0 4rem;
+            margin-bottom: 3rem;
+            border-radius: 0 0 40px 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .identity {
+            flex: 2;
+            min-width: 300px;
         }
 
         .contact-info {
-            text-align: right;
+            flex: 1;
+            min-width: 250px;
         }
 
-        .contact-info a {
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.05em;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.15);
             color: white;
-            text-decoration: none;
-            margin-left: 1rem;
+            padding: 0.5rem 1.25rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 1rem 0;
+            backdrop-filter: blur(4px);
         }
 
-        /* Section Styles */
         .section {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 5rem 0;
         }
 
-        .section h2 {
+        .section-title {
+            font-size: 2rem;
             color: var(--primary);
+            margin-bottom: 2.5rem;
+            padding-bottom: 0.75rem;
             border-bottom: 3px solid var(--secondary);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
+            position: relative;
         }
 
-        /* Experience Cards */
-        .experience-card {
-            border-left: 4px solid var(--accent);
-            padding-left: 1rem;
-            margin-bottom: 2rem;
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
         }
 
-        .experience-card h3 {
+        .integration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .marketplace-card {
+            background: var(--surface);
+            padding: 1.75rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .marketplace-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+        }
+
+        .ai-badge {
+            background: var(--secondary);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .impact-number {
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+            display: inline-block;
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .experience-card .duration {
-            color: var(--accent);
-            font-weight: bold;
+        .timeline-item {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary);
         }
 
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+        .checklist {
+            list-style: none;
+            margin: 1.5rem 0;
         }
 
-        .skill-category {
-            background: var(--background);
-            padding: 1rem;
-            border-radius: 10px;
-            border: 2px solid var(--primary);
-        }
-
-        .skill-category h4 {
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
-        }
-
-        /* Awards Section */
-        .awards {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .award-item {
+        .checklist li {
+            margin: 0.75rem 0;
             display: flex;
             align-items: center;
-            padding: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin: 0.75rem 0;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            transition: background 0.2s ease;
+        }
+
+        .contact-link:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .gradient-card {
             background: linear-gradient(45deg, var(--primary), var(--accent));
             color: white;
-            border-radius: 10px;
-        }
-
-        .award-item i {
-            font-size: 1.5rem;
-            margin-right: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .contact-info {
-                text-align: center;
-                margin-top: 1rem;
-            }
+            padding: 2rem;
+            border-radius: 1rem;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container header-content">
-            <div>
-                <h1>Deepak Kumar</h1>
-                <p>Associate Product Manager</p>
-            </div>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> deepakraj5387@gmail.com</p>
-                <p><i class="fas fa-phone"></i> +91-6203135616</p>
-                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
+    <header class="hero">
+        <div class="container">
+            <div class="header-content">
+                <div class="identity">
+                    <h1>Deepak Kumar</h1>
+                    <p class="badge">IIT Bombay '23</p>
+                    <p style="font-size: 1.25rem; opacity: 0.95;">AI Product Manager | Marketplace Integration Expert</p>
+                </div>
+                <div class="contact-info">
+                    <a href="mailto:deepakraj5387@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope fa-lg"></i>
+                        deepakraj5387@gmail.com
+                    </a>
+                    <a href="tel:+916203135616" class="contact-link">
+                        <i class="fas fa-phone fa-lg"></i>
+                        +91-6203135616
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
     <main class="container">
         <section class="section">
-            <h2>Professional Summary</h2>
-            <p>Associate Product Manager with 2+ years of experience leading the development of AI-powered SaaS solutions. Proficient in integrating APIs and driving AI/ML feature adoption. Skilled in collaborating with cross-functional teams to deliver machine learning models and data-driven product roadmaps.</p>
+            <h2 class="section-title">AI-Powered Marketplace Solutions</h2>
+            <div class="integration-grid">
+                <div class="marketplace-card">
+                    <i class="fas fa-cubes fa-2x"></i>
+                    <h3>Amazon Ecosystem</h3>
+                    <div class="ai-badge">SP-API Integration</div>
+                    <ul class="checklist">
+                        <li>Automated 20+ seller reports</li>
+                        <li>AI-driven campaign management</li>
+                        <li>Generative product listings</li>
+                    </ul>
+                    <div class="impact-number">40% Efficiency Gain</div>
+                </div>
+
+                <div class="marketplace-card">
+                    <i class="fas fa-shipping-fast fa-2x"></i>
+                    <h3>Flipkart</h3>
+                    <div class="ai-badge">Seller Hub Integration</div>
+                    <ul class="checklist">
+                        <li>AI-powered inventory forecasting</li>
+                        <li>Automated performance reporting</li>
+                        <li>Smart pricing recommendations</li>
+                    </ul>
+                    <div class="impact-number">25% Efficiency Gain</div>
+                </div>
+
+                <div class="marketplace-card">
+                    <i class="fas fa-tags fa-2x"></i>
+                    <h3>Shopclues</h3>
+                    <div class="ai-badge">AI Integration</div>
+                    <ul class="checklist">
+                        <li>Automated product categorization</li>
+                        <li>AI-generated marketing content</li>
+                        <li>Dynamic pricing engine</li>
+                    </ul>
+                    <div class="impact-number">35% Sales Boost</div>
+                </div>
+
+                <div class="marketplace-card">
+                    <i class="fas fa-network-wired fa-2x"></i>
+                    <h3>ONDC Network</h3>
+                    <div class="ai-badge">Seller Partner API</div>
+                    <ul class="checklist">
+                        <li>Smart onboarding system</li>
+                        <li>Cross-platform listing generator</li>
+                        <li>Automated inventory sync</li>
+                    </ul>
+                    <div class="impact-number">50% Faster Integration</div>
+                </div>
+
+                <div class="marketplace-card">
+                    <i class="fas fa-store fa-2x"></i>
+                    <h3>Shopify</h3>
+                    <div class="ai-badge">Store API Integration</div>
+                    <ul class="checklist">
+                        <li>Automated product uploads</li>
+                        <li>AI-generated store descriptions</li>
+                        <li>Unified analytics dashboard</li>
+                    </ul>
+                    <div class="impact-number">40% Time Savings</div>
+                </div>
+            </div>
         </section>
 
         <section class="section">
-            <h2>Experience</h2>
-            <div class="experience-card">
-                <h3>KAS Global Commerce Inc - Associate Product Manager</h3>
-                <p class="duration">March 2024 - Present</p>
-                <ul>
-                    <li>Led integration of SP-API & Amazon Ads API, reducing manual effort by 40%</li>
-                    <li>Developed 5+ AI/ML features cutting user go-to-market time by 50%</li>
-                    <li>Boosted user conversions by 20% through pricing strategy redesign</li>
+            <h2 class="section-title">Generative AI Solutions</h2>
+            <div class="gradient-card">
+                <div class="impact-number">60% GTM Reduction</div>
+                <h3>Automated Multi-Platform Listing Generation</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                    <div>
+                        <h4><i class="fas fa-text-width"></i> Text Generation</h4>
+                        <ul class="checklist">
+                            <li>Product descriptions</li>
+                            <li>Marketing copy</li>
+                            <li>SEO-optimized content</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-image"></i> Image Processing</h4>
+                        <ul class="checklist">
+                            <li>Product image enhancement</li>
+                            <li>Background removal</li>
+                            <li>Style adaptation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Professional Journey</h2>
+            <div class="timeline-item">
+                <h3>KAS Global Commerce Inc</h3>
+                <p class="duration">March 2024 - Present | Associate Product Manager</p>
+                <div class="ai-badge">Cross-functional Leadership</div>
+                <ul class="checklist">
+                    <li>Collaborated with data science teams</li>
+                    <li>Partnered with engineering teams</li>
+                    <li>Defined business OKRs</li>
+                    <li>Streamlined operational workflows</li>
                 </ul>
             </div>
 
-            <div class="experience-card">
-                <h3>Erogde Inc - Associate Product Manager</h3>
-                <p class="duration">April 2023 - Feb 2024</p>
-                <ul>
-                    <li>Implemented Hotjar analytics leading to 33% UX improvement</li>
-                    <li>Automated workflows saving 20+ hours weekly across teams</li>
-                    <li>Developed customized alerts reducing ad spend wastage</li>
+            <div class="timeline-item">
+                <h3>Erogde Inc</h3>
+                <p class="duration">April 2023 - Feb 2024 | Associate Product Manager</p>
+                <ul class="checklist">
+                    <li>Automated marketplace workflows</li>
+                    <li>Improved UX by 33%</li>
+                    <li>Reduced ad spend wastage by 40%</li>
+                    <li>Integrated multiple APIs</li>
                 </ul>
             </div>
         </section>
 
         <section class="section">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Product Management</h4>
-                    <p>Product Roadmapping, Agile Methodologies, API Integrations, Pricing Strategy</p>
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="integration-grid">
+                <div class="marketplace-card">
+                    <h3><i class="fas fa-tools"></i> Technical Skills</h3>
+                    <ul class="checklist">
+                        <li>Postman • DBeaver • SQL</li>
+                        <li>Hotjar • Google Analytics</li>
+                        <li>Python • REST APIs</li>
+                    </ul>
                 </div>
-                <div class="skill-category">
-                    <h4>AI/ML & Data</h4>
-                    <p>Generative AI, Predictive Analytics, A/B Testing, Data-Driven Decision Making</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Technical Tools</h4>
-                    <p>SQL, Jira, Figma, Postman, Google Analytics, ChatGPT</p>
-                </div>
-            </div>
-        </section>
 
-        <section class="section">
-            <h2>Achievements</h2>
-            <div class="awards">
-                <div class="award-item">
-                    <i class="fas fa-trophy"></i>
-                    <div>
-                        <h4>IIT Bombay Hockey Team</h4>
-                        <p>52nd Inter-IIT Sports Meet</p>
-                    </div>
+                <div class="marketplace-card">
+                    <h3><i class="fas fa-brain"></i> AI/ML Expertise</h3>
+                    <ul class="checklist">
+                        <li>Generative AI</li>
+                        <li>Natural Language Processing</li>
+                        <li>Predictive Analytics</li>
+                    </ul>
                 </div>
-                <div class="award-item">
-                    <i class="fas fa-medal"></i>
-                    <div>
-                        <h4>East-Zone Hockey Championship</h4>
-                        <p>Silver Medal (2017)</p>
-                    </div>
+
+                <div class="marketplace-card">
+                    <h3><i class="fas fa-users"></i> Leadership</h3>
+                    <ul class="checklist">
+                        <li>Stakeholder Management</li>
+                        <li>Agile Development</li>
+                        <li>Growth Strategy</li>
+                    </ul>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer style="background: var(--primary); color: white; text-align: center; padding: 1rem;">
-        <p>© 2024 Deepak Kumar. All rights reserved.</p>
+    <footer style="background: var(--primary); color: white; padding: 3rem 0; margin-top: 6rem; text-align: center;">
+        <div class="container">
+            <p style="font-size: 1.25rem; margin-bottom: 1.5rem;">Let's shape the future of AI-driven commerce</p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center;">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-link" style="padding: 0.75rem 1.5rem;">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/yourprofile" target="_blank" class="contact-link" style="padding: 0.75rem 1.5rem;">
+                    <i class="fab fa-github fa-lg"></i>
+                    GitHub
+                </a>
+            </div>
+            <p style="margin-top: 3rem; opacity: 0.8;">© 2024 Deepak Kumar. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
