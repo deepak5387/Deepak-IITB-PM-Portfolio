@@ -1,394 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak Kumar | AI Product Leader</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #2563EB;
-            --secondary: #10B981;
-            --accent: #06B6D4;
-            --background: #F8FAFC;
-            --text: #1E293B;
-            --surface: #FFFFFF;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-        }
-
-        body {
-            background: var(--background);
-            color: var(--text);
-            line-height: 1.6;
-            font-size: 1.05rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 5rem 0 4rem;
-            margin-bottom: 3rem;
-            border-radius: 0 0 40px 40px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .identity {
-            flex: 2;
-            min-width: 300px;
-        }
-
-        .contact-info {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            letter-spacing: -0.05em;
-        }
-
-        .badge {
-            background: rgba(255,255,255,0.15);
-            color: white;
-            padding: 0.5rem 1.25rem;
-            border-radius: 2rem;
-            font-weight: 600;
-            display: inline-block;
-            margin: 1rem 0;
-            backdrop-filter: blur(4px);
-        }
-
-        .section {
-            margin: 5rem 0;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 2.5rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 3px solid var(--secondary);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: var(--accent);
-        }
-
-        .integration-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .marketplace-card {
-            background: var(--surface);
-            padding: 1.75rem;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-left: 4px solid var(--primary);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .marketplace-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.1);
-        }
-
-        .ai-badge {
-            background: var(--secondary);
-            color: white;
-            padding: 0.4rem 1.2rem;
-            border-radius: 1rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        .impact-number {
-            color: var(--primary);
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 1.5rem 0;
-            display: inline-block;
-            background: linear-gradient(to right, var(--secondary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .timeline-item {
-            background: var(--surface);
-            padding: 2rem;
-            border-radius: 1rem;
-            margin: 2.5rem 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-left: 4px solid var(--primary);
-        }
-
-        .checklist {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-
-        .checklist li {
-            margin: 0.75rem 0;
-            display: flex;
-            align-items: center;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .checklist li::before {
-            content: "✓";
-            color: var(--secondary);
-            position: absolute;
-            left: 0;
-            font-weight: 700;
-        }
-
-        .contact-link {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin: 0.75rem 0;
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            transition: background 0.2s ease;
-        }
-
-        .contact-link:hover {
-            background: rgba(255,255,255,0.1);
-        }
-
-        .gradient-card {
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-            color: white;
-            padding: 2rem;
-            border-radius: 1rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepak Kumar - Product Manager Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #22d3ee;
+      --accent: #4ade80;
+      --background: #0b1120;
+      --surface: #1e293b;
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      --radius: 12px;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: var(--background);
+      color: var(--text-primary);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    a {
+      text-decoration: none;
+      color: var(--accent);
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem 0;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), #1e40af);
+      color: #fff;
+      padding: 40px 0;
+      border-radius: 0 0 30px 30px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .header-content h1 {
+      font-size: 2.8rem;
+    }
+    .contact-info p, .contact-info a {
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+    .section {
+      background: rgba(30, 41, 59, 0.9);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+    .section:hover {
+      transform: translateY(-5px);
+    }
+    .section h2 {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      border-left: 5px solid var(--secondary);
+      padding-left: 1rem;
+    }
+    .experience-card, .main-card, .feature-column, .skill-category, .award-item, .integration-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    .experience-card:hover, .main-card:hover, .feature-column:hover, .skill-category:hover, .award-item:hover, .integration-card:hover {
+      transform: scale(1.02);
+    }
+    .skills-grid, .api-grid, .feature-grid, .metric-grid, .cards-container, .subcards-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .skills-grid, .feature-grid, .cards-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .api-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .metric-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .api-item, .metric-item, .subcard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      border-radius: var(--radius);
+      text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(6px);
+      transition: 0.3s ease;
+    }
+    .api-item:hover, .subcard:hover, .metric-item:hover {
+      transform: scale(1.05);
+      background: var(--secondary);
+      color: #000;
+      cursor: pointer;
+    }
+    .metric-value {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .main-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.2rem;
+    }
+    .main-card-header i {
+      font-size: 1.6rem;
+    }
+    .subcard h4 {
+      margin-bottom: 0.3rem;
+    }
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+      .feature-grid, .cards-container, .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header class="hero">
-        <div class="container">
-            <div class="header-content">
-                <div class="identity">
-                    <h1>Deepak Kumar</h1>
-                    <p class="badge">IIT Bombay '23</p>
-                    <p style="font-size: 1.25rem; opacity: 0.95;">AI Product Manager | Marketplace Integration Expert</p>
-                </div>
-                <div class="contact-info">
-                    <a href="mailto:deepakraj5387@gmail.com" class="contact-link">
-                        <i class="fas fa-envelope fa-lg"></i>
-                        deepakraj5387@gmail.com
-                    </a>
-                    <a href="tel:+916203135616" class="contact-link">
-                        <i class="fas fa-phone fa-lg"></i>
-                        +91-6203135616
-                    </a>
-                </div>
-            </div>
+
+<header>
+  <div class="container header-content">
+    <div>
+      <h1>Deepak Kumar</h1>
+      <p>Associate Product Manager</p>
+    </div>
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> deepakraj5387@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +91-6203135616</p>
+      <a href="#"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h2>Professional Summary</h2>
+    <p>Associate Product Manager with 2+ years of experience leading the development of AI-powered SaaS solutions. Proficient in integrating APIs and driving AI/ML feature adoption. Skilled in collaborating with cross-functional teams to deliver machine learning models and data-driven product roadmaps.</p>
+  </section>
+  <section class="section">
+    <h2>Professional Experience</h2>
+
+    <!-- KAS Global Commerce -->
+    <div class="experience-card">
+      <h3>KAS Global Commerce Inc</h3>
+      <p class="duration">🟢 March 2024 - Present | 🧑💼 Associate Product Manager</p>
+    </div>
+
+    <!-- Erogde Inc -->
+    <div class="experience-card">
+      <h3>Erogde Inc</h3>
+      <p class="duration">🔵 April 2023 - Feb 2024 | 👨💻 Associate Product Manager</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>AI-Powered Marketplace Suite</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Unified platform for e-commerce automation</p>
+
+    <div class="api-grid">
+      <div class="api-item" style="background: linear-gradient(135deg, #2563eb, #3b82f6); color: white;">
+        <i class="fab fa-aws"></i>
+        Amazon SP-API
+      </div>
+      <div class="api-item" style="background: linear-gradient(135deg, #f59e0b, #fbbf24); color: #1e293b;">
+        <i class="fas fa-ad"></i>
+        Amazon Ads
+      </div>
+      <div class="api-item" style="background: linear-gradient(135deg, #10b981, #059669); color: white;">
+        <i class="fas fa-store"></i>
+        Shopify API
+      </div>
+      <div class="api-item" style="background: linear-gradient(135deg, #7c3aed, #8b5cf6); color: white;">
+        <i class="fas fa-network-wired"></i>
+        ONDC Network
+      </div>
+      <div class="api-item" style="background: linear-gradient(135deg, #e11d48, #f43f5e); color: white;">
+        <i class="fas fa-shopping-bag"></i>
+        Flipkart API
+      </div>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-column">
+        <h4><i class="fas fa-rocket"></i> Key Features</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li>✅ Automated 20+ seller reports weekly</li>
+          <li>✅ 0→1 Amazon Ads API integration</li>
+          <li>✅ Cross-platform listing generation</li>
+          <li>✅ Smart ONDC onboarding system</li>
+          <li>✅ Unified campaign dashboard</li>
+        </ul>
+      </div>
+
+      <div class="feature-column">
+        <h4><i class="fas fa-robot"></i> AI Capabilities</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li>✅ Generative AI product listings</li>
+          <li>✅ Marketplace-specific content adaptation</li>
+          <li>✅ Dynamic pricing engine</li>
+          <li>✅ Inventory prediction models</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric-item">
+        <div class="metric-value">40%</div>
+        <div>Efficiency Gain</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-value">20+</div>
+        <div>Hours Saved/Week</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-value">15%</div>
+        <div>Faster Onboarding</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Core Competencies</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h4>🔧 Technical Expertise</h4>
+        <ul style="list-style: none; padding-left: 0;">
+          <li>✓ API Development & Integration (Postman, REST APIs)</li>
+          <li>✓ Data Analysis Stack (SQL, Python, Google Analytics)</li>
+          <li>✓ UX Research Tools (Hotjar, UserTesting)</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4>🤖 AI/ML Expertise</h4>
+        <ul style="list-style: none; padding-left: 0;">
+          <li>✓ Generative AI Implementation</li>
+          <li>✓ NLP Solutions Development</li>
+          <li>✓ Predictive Analytics Modeling</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4>👥 Leadership</h4>
+        <ul style="list-style: none; padding-left: 0;">
+          <li>✓ Cross-functional Team Leadership</li>
+          <li>✓ Agile Product Development</li>
+          <li>✓ Strategic Roadmapping</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4>💰 Pricing Strategy</h4>
+        <ul style="list-style: none; padding-left: 0;">
+          <li>✓ 0→1 Pricing Model Development</li>
+          <li>✓ Value-based Pricing Strategies</li>
+          <li>✓ Price Optimization Analysis</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4>🚀 Product Execution</h4>
+        <ul style="list-style: none; padding-left: 0;">
+          <li>✓ Market Validation & User Research</li>
+          <li>✓ KPI-Driven Development</li>
+          <li>✓ Go-to-Market Strategy</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h2 style="text-align: center;">Passions & Achievements</h2>
+    <div class="cards-container">
+
+      <!-- Gaming Card -->
+      <div class="main-card" style="--main-color: #009FFD;">
+        <div class="main-card-header">
+          <i class="fas fa-gamepad"></i>
+          <h3>Gaming & Esports</h3>
         </div>
-    </header>
-
-    <main class="container">
-        <section class="section">
-            <h2 class="section-title">AI-Powered Marketplace Solutions</h2>
-            <div class="integration-grid">
-                <div class="marketplace-card">
-                    <i class="fas fa-cubes fa-2x"></i>
-                    <h3>Amazon Ecosystem</h3>
-                    <div class="ai-badge">SP-API Integration</div>
-                    <ul class="checklist">
-                        <li>Automated 20+ seller reports</li>
-                        <li>AI-driven campaign management</li>
-                        <li>Generative product listings</li>
-                    </ul>
-                    <div class="impact-number">40% Efficiency Gain</div>
-                </div>
-
-                <div class="marketplace-card">
-                    <i class="fas fa-shipping-fast fa-2x"></i>
-                    <h3>Flipkart</h3>
-                    <div class="ai-badge">Seller Hub Integration</div>
-                    <ul class="checklist">
-                        <li>AI-powered inventory forecasting</li>
-                        <li>Automated performance reporting</li>
-                        <li>Smart pricing recommendations</li>
-                    </ul>
-                    <div class="impact-number">25% Efficiency Gain</div>
-                </div>
-
-                <div class="marketplace-card">
-                    <i class="fas fa-tags fa-2x"></i>
-                    <h3>Shopclues</h3>
-                    <div class="ai-badge">AI Integration</div>
-                    <ul class="checklist">
-                        <li>Automated product categorization</li>
-                        <li>AI-generated marketing content</li>
-                        <li>Dynamic pricing engine</li>
-                    </ul>
-                    <div class="impact-number">35% Sales Boost</div>
-                </div>
-
-                <div class="marketplace-card">
-                    <i class="fas fa-network-wired fa-2x"></i>
-                    <h3>ONDC Network</h3>
-                    <div class="ai-badge">Seller Partner API</div>
-                    <ul class="checklist">
-                        <li>Smart onboarding system</li>
-                        <li>Cross-platform listing generator</li>
-                        <li>Automated inventory sync</li>
-                    </ul>
-                    <div class="impact-number">50% Faster Integration</div>
-                </div>
-
-                <div class="marketplace-card">
-                    <i class="fas fa-store fa-2x"></i>
-                    <h3>Shopify</h3>
-                    <div class="ai-badge">Store API Integration</div>
-                    <ul class="checklist">
-                        <li>Automated product uploads</li>
-                        <li>AI-generated store descriptions</li>
-                        <li>Unified analytics dashboard</li>
-                    </ul>
-                    <div class="impact-number">40% Time Savings</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Generative AI Solutions</h2>
-            <div class="gradient-card">
-                <div class="impact-number">60% GTM Reduction</div>
-                <h3>Automated Multi-Platform Listing Generation</h3>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
-                    <div>
-                        <h4><i class="fas fa-text-width"></i> Text Generation</h4>
-                        <ul class="checklist">
-                            <li>Product descriptions</li>
-                            <li>Marketing copy</li>
-                            <li>SEO-optimized content</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4><i class="fas fa-image"></i> Image Processing</h4>
-                        <ul class="checklist">
-                            <li>Product image enhancement</li>
-                            <li>Background removal</li>
-                            <li>Style adaptation</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Professional Journey</h2>
-            <div class="timeline-item">
-                <h3>KAS Global Commerce Inc</h3>
-                <p class="duration">March 2024 - Present | Associate Product Manager</p>
-                <div class="ai-badge">Cross-functional Leadership</div>
-                <ul class="checklist">
-                    <li>Collaborated with data science teams</li>
-                    <li>Partnered with engineering teams</li>
-                    <li>Defined business OKRs</li>
-                    <li>Streamlined operational workflows</li>
-                </ul>
-            </div>
-
-            <div class="timeline-item">
-                <h3>Erogde Inc</h3>
-                <p class="duration">April 2023 - Feb 2024 | Associate Product Manager</p>
-                <ul class="checklist">
-                    <li>Automated marketplace workflows</li>
-                    <li>Improved UX by 33%</li>
-                    <li>Reduced ad spend wastage by 40%</li>
-                    <li>Integrated multiple APIs</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Core Competencies</h2>
-            <div class="integration-grid">
-                <div class="marketplace-card">
-                    <h3><i class="fas fa-tools"></i> Technical Skills</h3>
-                    <ul class="checklist">
-                        <li>Postman • DBeaver • SQL</li>
-                        <li>Hotjar • Google Analytics</li>
-                        <li>Python • REST APIs</li>
-                    </ul>
-                </div>
-
-                <div class="marketplace-card">
-                    <h3><i class="fas fa-brain"></i> AI/ML Expertise</h3>
-                    <ul class="checklist">
-                        <li>Generative AI</li>
-                        <li>Natural Language Processing</li>
-                        <li>Predictive Analytics</li>
-                    </ul>
-                </div>
-
-                <div class="marketplace-card">
-                    <h3><i class="fas fa-users"></i> Leadership</h3>
-                    <ul class="checklist">
-                        <li>Stakeholder Management</li>
-                        <li>Agile Development</li>
-                        <li>Growth Strategy</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer style="background: var(--primary); color: white; padding: 3rem 0; margin-top: 6rem; text-align: center;">
-        <div class="container">
-            <p style="font-size: 1.25rem; margin-bottom: 1.5rem;">Let's shape the future of AI-driven commerce</p>
-            <div style="display: flex; gap: 1.5rem; justify-content: center;">
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-link" style="padding: 0.75rem 1.5rem;">
-                    <i class="fab fa-linkedin fa-lg"></i>
-                    LinkedIn
-                </a>
-                <a href="https://github.com/yourprofile" target="_blank" class="contact-link" style="padding: 0.75rem 1.5rem;">
-                    <i class="fab fa-github fa-lg"></i>
-                    GitHub
-                </a>
-            </div>
-            <p style="margin-top: 3rem; opacity: 0.8;">© 2024 Deepak Kumar. All rights reserved.</p>
+        <div class="subcards-grid">
+          <div class="subcard">
+            <h4>Valorant</h4>
+            <p>Diamond Rank<br>500+ Competitive Wins</p>
+          </div>
+          <div class="subcard">
+            <h4>FIFA Esports</h4>
+            <p>Division Rivals<br>Ultimate Team</p>
+          </div>
+          <div class="subcard">
+            <h4>Esports Fan</h4>
+            <p>League Worlds, VCT<br>CS:GO Majors</p>
+          </div>
         </div>
-    </footer>
+      </div>
+
+      <!-- Sports Card -->
+      <div class="main-card" style="--main-color: #FFA400;">
+        <div class="main-card-header">
+          <i class="fas fa-medal"></i>
+          <h3>Athletics</h3>
+        </div>
+        <div class="subcards-grid">
+          <div class="subcard">
+            <h4>Field Hockey</h4>
+            <p>Right Wing<br>15+ Years</p>
+          </div>
+          <div class="subcard">
+            <h4>IIT Bombay Team</h4>
+            <p>52nd Inter-IIT<br>Sports Meet</p>
+          </div>
+          <div class="subcard">
+            <h4>East-Zone Silver</h4>
+            <p>2017 Championship</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entertainment Card -->
+      <div class="main-card" style="--main-color: #6c5ce7;">
+        <div class="main-card-header">
+          <i class="fas fa-film"></i>
+          <h3>Entertainment</h3>
+        </div>
+        <div class="subcards-grid">
+          <div class="subcard">
+            <h4>Sci-Fi Movies</h4>
+            <p>Inception<br>Interstellar</p>
+          </div>
+          <div class="subcard">
+            <h4>Thrillers</h4>
+            <p>Se7en<br>Prisoners</p>
+          </div>
+          <div class="subcard">
+            <h4>Anime</h4>
+            <p>Attack on Titan<br>Demon Slayer</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
 </body>
 </html>
